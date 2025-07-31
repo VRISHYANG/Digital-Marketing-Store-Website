@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+   <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T7QXFSR4');</script>
+<!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DA Course Store</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      display: flex;
+    }
+
+
+    main {
+      padding: 30px;
+      flex: 1;
+    }
+
+    form {
+      max-width: 600px;
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: 500;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #999;
+      border-radius: 4px;
+      margin-top: 5px;
+    }
+
+    textarea {
+      height: 150px;
+      resize: vertical;
+    }
+
+    ul {
+      line-height: 1.6;
+    }
+
+    .custom-submit {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 20px;
+      background-color: #222;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .custom-submit:hover {
+      background-color: #444;
+    }
+
+
+    aside {
+      width: 250px;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-right: 1px solid #ccc;
+    }
+    aside a {
+      text-decoration: none;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+ <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7QXFSR4"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  <!-- Left Sidebar -->
+  <aside>
+    <h2>DM Course Store</h2>
+    <nav>
+      <ul style="list-style: none; padding-left: 0;">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Course Details</a></li>
+        <li><a href="beginner enrollment.html">Beginners Enrollment</a></li>
+        <li><a href="professional enrollment.html">Professionals Enrollment</a></li>
+      </ul>
+    </nav>
+
+    <div class="recent-posts" style="margin-top: 20px;">
+      <h4>recent posts</h4>
+      <a href="post1.html"><u>New Era of Digital Marketing!</u></a>
+    </div>
+
+  </aside>
+
+  <main>
+    <h1>Professionals Enrollment</h1>
+    <p>To enroll into professionals course, please fill the form below. Once done our executive will get in touch with you for further course details.</p>
+
+    <form id="pf1">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" />
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" />
+
+      <label for="source">How did you hear about us?</label>
+      <select id="source" name="source" required>
+        <option>Search engine</option>
+        <option>Social media</option>
+        <option>TV</option>
+        <option>Radio</option>
+        <option>Friend or family</option>
+      </select>
+
+      <label for="details">Other details</label>
+      <textarea id="details" name="details"></textarea>
+
+      <!-- Removed native submit input -->
+
+      <!-- Custom styled submit button as anchor -->
+      <button type="submit" class="custom-submit">Submit Professional's Enrollment</button>
+    </form>
+  </main>
+
+  <script>
+  document.getElementById('pf1').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent actual submission
+    // Optional: Add validation or data collection logic here
+
+      // 🔄 Push custom value to dataLayer (e.g., dropdown selection)
+    const sourceVal = document.querySelector('#source')?.value || '';
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'professional_form_submit',
+      source_f: sourceVal
+    });
+
+    // Let GTM detect the submission (since it's a real form submit event)
+    // Use setTimeout to allow GTM time to process
+    setTimeout(function () {
+      window.open('Thankyou Professional.html', '_blank'); // Open thank-you page in new tab
+    }, 300); // slight delay to let GTM fire the tag
+  });
+</script>
+</body>
+</html>

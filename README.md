@@ -9,5 +9,5 @@ This repository is about my sample website digital marketing course store.
 ---
 
 ### 📝 Replace:
-- The Netlify link [https://dacoursestore.netlify.app/](https://dacoursestore.netlify.app/)
+The Netlify link: [https://dacoursestore.netlify.app/](https://dacoursestore.netlify.app/)
 
